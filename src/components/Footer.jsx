@@ -38,7 +38,7 @@ const Footer = () => {
               Connect
             </h4>
             <a 
-              href="https://wa.me/91XXXXXXXXXX" 
+              href="https://wa.me/6201205698" 
               target="_blank" 
               rel="noopener noreferrer"
               className="text-text-muted hover:text-accent transition-colors flex items-center space-x-2"

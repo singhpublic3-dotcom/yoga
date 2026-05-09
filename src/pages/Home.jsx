@@ -1,6 +1,8 @@
 import { useState } from 'react';
 import { motion } from 'framer-motion';
 import { ChevronDown, MessageSquare, GraduationCap, Microscope, Sparkles, User, Heart, Send, CheckCircle, AlertCircle } from 'lucide-react';
+import heroImg from '../assets/hero-main.png';
+import yoga_idle from '../assets/yoga_idel.jpeg';
 
 const Home = () => {
   const [formData, setFormData] = useState({
@@ -23,7 +25,7 @@ const Home = () => {
 
     // SheetDB API integration
     // REPLACE 'YOUR_SHEETDB_ID' with your actual ID
-    const SHEETDB_API_URL = 'https://sheetdb.io/api/v1/YOUR_SHEETDB_ID';
+    const SHEETDB_API_URL = 'https://sheetdb.io/api/v1/anughmbxqi19b';
 
     try {
       const response = await fetch(SHEETDB_API_URL, {
@@ -115,7 +117,7 @@ const Home = () => {
                 Book a Session
               </a>
               <a 
-                href="https://wa.me/91XXXXXXXXXX"
+                href="https://wa.me/916201205698"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="w-full sm:w-auto px-8 py-4 border-2 border-accent text-accent rounded-full font-dm font-bold flex items-center justify-center space-x-2 hover:bg-accent/5 transition-all"
@@ -132,15 +134,21 @@ const Home = () => {
             animate={{ opacity: 1, scale: 1 }}
             transition={{ duration: 1, ease: "easeOut" }}
           >
-            <div className="relative w-72 h-72 md:w-96 md:h-96">
-              <div className="absolute inset-0 bg-secondary rounded-full animate-float"></div>
-              <div className="absolute inset-2 border-2 border-accent-light/30 rounded-full"></div>
-              <div className="absolute inset-0 flex items-center justify-center">
-                <svg viewBox="0 0 100 100" className="w-48 h-48 text-accent animate-pulse">
-                  <path d="M50 20 C55 35 75 35 75 50 C75 65 55 65 50 80 C45 65 25 65 25 50 C25 35 45 35 50 20 Z" fill="currentColor" opacity="0.8"/>
-                  <path d="M50 30 C53 40 65 40 65 50 C65 60 53 60 50 70 C47 60 35 60 35 50 C35 40 47 40 50 30 Z" fill="white" opacity="0.5"/>
-                </svg>
+            <div className="relative w-full max-w-md aspect-square">
+              {/* Decorative blobs/shapes behind image */}
+              <div className="absolute top-[-10%] right-[-10%] w-32 h-32 bg-accent-light/10 rounded-full blur-3xl"></div>
+              <div className="absolute bottom-[-10%] left-[-10%] w-48 h-48 bg-secondary/20 rounded-full blur-3xl"></div>
+              
+              <div className="relative z-10 w-full h-full rounded-[3rem] overflow-hidden shadow-2xl border-4 border-white">
+                <img 
+                  src={yoga_idle} 
+                  alt="Yoga Therapy" 
+                  className="w-full h-full object-cover transform hover:scale-105 transition-transform duration-700"
+                />
               </div>
+              
+              {/* Floating accent element */}
+              <div className="absolute -bottom-6 -right-6 w-24 h-24 bg-accent rounded-2xl rotate-12 -z-0 opacity-20"></div>
             </div>
           </motion.div>
         </div>
@@ -320,7 +328,7 @@ const Home = () => {
                   </div>
                 </div>
                 <a 
-                  href="https://wa.me/91XXXXXXXXXX"
+                  href="https://wa.me/916201205698"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="px-6 py-3 bg-[#25D366] text-white rounded-full font-dm font-bold flex items-center space-x-2 hover:bg-[#25D366]/90 transition-all"
